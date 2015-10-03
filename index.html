@@ -68,17 +68,26 @@
     <article id="post-useful-python-modules" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/10/03/useful-python-modules/" class="article-date">
-  <time datetime="2015-10-03T12:44:10.001Z" itemprop="datePublished">2015-10-03</time>
+  <time datetime="2015-10-03T13:00:49.196Z" itemprop="datePublished">2015-10-03</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/10/03/useful-python-modules/">常用的python模块</a>
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <p>title : 常用的python模块<br>time : 2015-10-03  20:43:23<br>tags : 技术</p>
-<h2 id="subprocess">subprocess</h2><p>python的subprocess模块有执行子进程的命令subprocess.Popen()，这个函数立即返回一个子进程对象sp，如果需要知道更多的信息，需要调用sp.wait()等待进程结束，或者调用sp.poll()查询是否结束，或者调用sp.communicate()与之通信，其中communicate输入一个字符串给子进程的stdin，同时返回该子进程的stdout和stderr两个字符串。</p>
+        <h2 id="subprocess">subprocess</h2><p>python的subprocess模块有执行子进程的命令subprocess.Popen()，这个函数立即返回一个子进程对象sp，如果需要知道更多的信息，需要调用sp.wait()等待进程结束，或者调用sp.poll()查询是否结束，或者调用sp.communicate()与之通信，其中communicate输入一个字符串给子进程的stdin，同时返回该子进程的stdout和stderr两个字符串。</p>
 <p>为了方便调用，对于没有stdin，并且不关注stdout和stderr的子进程，可以调用subprocess.call()<br>，该函数调用Popen和call完成。</p>
 <p>如果要用communicate返回子进程的输出，必须在调用Popen时，指定其stdout=subprocess.PIPE，stderr=subprocess.PIPE，不知道要输入时，应该指定stdin=subprocess.PIPE。</p>
 <p>1 如果调用的是一个命令行cmd，需要指定Popen的参数shell=True。表示执行/bin/sh -c cmd。<br>2 如果命令行是一个字符串，没有指定shell=True的情况下，要求第一个word表示可执行程序的全路径。如果是一个字符串列表，第一个参数就没有要求。只要在PATH中存在即可。</p>
@@ -93,9 +102,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://eigopt.com/2015/10/03/useful-python-modules/" data-id="cifb2oy0300003c9bhadzga2a" class="article-share-link">Share</a>
+      <a data-url="http://eigopt.com/2015/10/03/useful-python-modules/" data-id="cifb38p4k0000ug9bilke1mn9" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
+
     </footer>
   </div>
   
@@ -130,7 +141,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://eigopt.com/2015/09/30/beijing-rain/" data-id="cifb2oy1m00073c9b2bmfbrkx" class="article-share-link">Share</a>
+      <a data-url="http://eigopt.com/2015/09/30/beijing-rain/" data-id="cifb38p7e0009ug9b5n5rec6u" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/心情/">心情</a></li></ul>
@@ -169,7 +180,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://eigopt.com/2015/09/29/national-day/" data-id="cifb2oy1100013c9bgvp9frqm" class="article-share-link">Share</a>
+      <a data-url="http://eigopt.com/2015/09/29/national-day/" data-id="cifb38p710003ug9bu4vqx41r" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/假期/">假期</a></li></ul>
@@ -208,7 +219,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://eigopt.com/2015/09/26/mid-autumn-day/" data-id="cifb2oy1e00043c9bl3eoqm6r" class="article-share-link">Share</a>
+      <a data-url="http://eigopt.com/2015/09/26/mid-autumn-day/" data-id="cifb38p770006ug9by91x6syq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/心情/">心情</a></li></ul>
@@ -231,7 +242,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/假期/">假期</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/心情/">心情</a><span class="tag-list-count">2</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/假期/">假期</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/心情/">心情</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术/">技术</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -240,7 +251,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/假期/" style="font-size: 10px;">假期</a> <a href="/tags/心情/" style="font-size: 20px;">心情</a>
+      <a href="/tags/假期/" style="font-size: 10px;">假期</a> <a href="/tags/心情/" style="font-size: 20px;">心情</a> <a href="/tags/技术/" style="font-size: 10px;">技术</a>
     </div>
   </div>
 
@@ -261,7 +272,7 @@
       <ul>
         
           <li>
-            <a href="/2015/10/03/useful-python-modules/">(no title)</a>
+            <a href="/2015/10/03/useful-python-modules/">常用的python模块</a>
           </li>
         
           <li>
