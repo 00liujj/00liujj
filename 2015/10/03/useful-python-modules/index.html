@@ -3,18 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>中秋节 | Liu Jianjun BLOG</title>
+  <title>Liu Jianjun BLOG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今天是中秋。天气配得上这个节日。">
+  <meta name="description" content="title : 常用的python模块time : 2015-10-03  20:43:23tags : 技术
+subprocesspython的subprocess模块有执行子进程的命令subprocess.Popen()，这个函数立即返回一个子进程对象sp，如果需要知道更多的信息，需要调用sp.wait()等待进程结束，或者调用sp.poll()查询是否结束，或者调用sp.communicat">
 <meta property="og:type" content="article">
-<meta property="og:title" content="中秋节">
-<meta property="og:url" content="http://eigopt.com/2015/09/26/mid-autumn-day/index.html">
+<meta property="og:title" content="Liu Jianjun BLOG">
+<meta property="og:url" content="http://eigopt.com/2015/10/03/useful-python-modules/index.html">
 <meta property="og:site_name" content="Liu Jianjun BLOG">
-<meta property="og:description" content="今天是中秋。天气配得上这个节日。">
-<meta property="og:updated_time" content="2015-09-26T03:33:50.755Z">
+<meta property="og:description" content="title : 常用的python模块time : 2015-10-03  20:43:23tags : 技术
+subprocesspython的subprocess模块有执行子进程的命令subprocess.Popen()，这个函数立即返回一个子进程对象sp，如果需要知道更多的信息，需要调用sp.wait()等待进程结束，或者调用sp.poll()查询是否结束，或者调用sp.communicat">
+<meta property="og:updated_time" content="2015-10-03T12:44:10.001Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="中秋节">
-<meta name="twitter:description" content="今天是中秋。天气配得上这个节日。">
+<meta name="twitter:title" content="Liu Jianjun BLOG">
+<meta name="twitter:description" content="title : 常用的python模块time : 2015-10-03  20:43:23tags : 技术
+subprocesspython的subprocess模块有执行子进程的命令subprocess.Popen()，这个函数立即返回一个子进程对象sp，如果需要知道更多的信息，需要调用sp.wait()等待进程结束，或者调用sp.poll()查询是否结束，或者调用sp.communicat">
   
     <link rel="alternative" href="/atom.xml" title="Liu Jianjun BLOG" type="application/atom+xml">
   
@@ -64,53 +67,48 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-mid-autumn-day" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-useful-python-modules" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/09/26/mid-autumn-day/" class="article-date">
-  <time datetime="2015-09-26T03:20:39.000Z" itemprop="datePublished">2015-09-26</time>
+    <a href="/2015/10/03/useful-python-modules/" class="article-date">
+  <time datetime="2015-10-03T12:44:10.001Z" itemprop="datePublished">2015-10-03</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      中秋节
-    </h1>
-  
-
-      </header>
-    
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今天是中秋。天气配得上这个节日。</p>
+        <p>title : 常用的python模块<br>time : 2015-10-03  20:43:23<br>tags : 技术</p>
+<h2 id="subprocess">subprocess</h2><p>python的subprocess模块有执行子进程的命令subprocess.Popen()，这个函数立即返回一个子进程对象sp，如果需要知道更多的信息，需要调用sp.wait()等待进程结束，或者调用sp.poll()查询是否结束，或者调用sp.communicate()与之通信，其中communicate输入一个字符串给子进程的stdin，同时返回该子进程的stdout和stderr两个字符串。</p>
+<p>为了方便调用，对于没有stdin，并且不关注stdout和stderr的子进程，可以调用subprocess.call()<br>，该函数调用Popen和call完成。</p>
+<p>如果要用communicate返回子进程的输出，必须在调用Popen时，指定其stdout=subprocess.PIPE，stderr=subprocess.PIPE，不知道要输入时，应该指定stdin=subprocess.PIPE。</p>
+<p>1 如果调用的是一个命令行cmd，需要指定Popen的参数shell=True。表示执行/bin/sh -c cmd。<br>2 如果命令行是一个字符串，没有指定shell=True的情况下，要求第一个word表示可执行程序的全路径。如果是一个字符串列表，第一个参数就没有要求。只要在PATH中存在即可。</p>
+<p> 要注意shell类型的区分。有login shell和interactive shell，还可以是两者的组合。</p>
+<h2 id="re">re</h2><p>python的re模块中，基本的函数是：<br>matchobject = re.search(pattern, string)<br>返回第一个匹配<br>matchobjectiterator = re.finditer(pattern, string)<br>返回所有匹配的一个迭代器<br>replacedstring = re.sub(pattern, replacement, string)<br>替换所有的匹配为replacement，返回替换后的字符串。<br>substringlist = re.split(pattern, string)<br> 将string用pattern进行分割，返回字符串列表。</p>
+<p>正则表达式有meta character的概念，元字符当成运算符，基于这些运算符可以形成字符串表达式。meta character有点像存储领域的meta data，其他称为raw data。</p>
+<h2 id="argparse">argparse</h2><p>argparse将命令行选项分为两类：positional arguments和optional arguments。python的argparse模块要求两个都用add_argument加入，将命令行参数解析为一个dict返回；而optparse只要求将optional argument用add_option加入，输出一个dict保存optional arguments，一个list保存positional argument。此外，argparse可以有subcommands，比如svn，git等。</p>
+<h2 id="其他">其他</h2><p>python的win32com模块可以用来访问windows的excel等。</p>
+<p>python的time模块有一个函数叫做strftime，可以将时间转成字符串。</p>
+<p>python的string模块有一个Template子模块，可以对一个字符串中的key替换成value。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://eigopt.com/2015/09/26/mid-autumn-day/" data-id="cifb2oy1e00043c9bl3eoqm6r" class="article-share-link">Share</a>
+      <a data-url="http://eigopt.com/2015/10/03/useful-python-modules/" data-id="cifb2oy0300003c9bhadzga2a" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/心情/">心情</a></li></ul>
-
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2015/09/29/national-day/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          国庆节
-        
-      </div>
-    </a>
   
+    <a href="/2015/09/30/beijing-rain/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">北京的雨</div>
+    </a>
   
 </nav>
 
@@ -120,7 +118,7 @@
   
   <section id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="post-mid-autumn-day" data-title="中秋节" data-url="http://eigopt.com/2015/09/26/mid-autumn-day/"></div>
+    <div class="ds-thread" data-thread-key="post-useful-python-modules" data-title="" data-url="http://eigopt.com/2015/10/03/useful-python-modules/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
